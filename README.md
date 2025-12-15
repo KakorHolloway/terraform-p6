@@ -67,3 +67,13 @@ Créez un fichier nommé project-1.tf, à partir de ce fichier créez un nouveau
 Dans un nouveau fichier nommé 02-users.tf, créez un nouvel utilisateur du nom que vous voulez dépendant du projet qui à été créé en amont. 
 
 Pour rappel la syntaxe c'est typederessouce.nomterraformdelaressource.attribut
+
+## Exo 4
+
+A la main créez un nouvel projet nommé terraform-import
+
+Via la commande terraform import, importez la ressource dans votre projet terraform. La ressource en question doit-être décrite au préalable dans le fichier 01-project.tf. Attention, ne supprimez pas le block décrivant le projet TERRAFORM. 
+
+Vérifiez l'import en supprimant toutes les ressources via terraform destroy. 
+
+Si votre import à bien fonctionné le projet terraform-import ne devrait plus exister. 
