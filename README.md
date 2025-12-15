@@ -77,3 +77,11 @@ Via la commande terraform import, importez la ressource dans votre projet terraf
 Vérifiez l'import en supprimant toutes les ressources via terraform destroy. 
 
 Si votre import à bien fonctionné le projet terraform-import ne devrait plus exister. 
+
+## Exo 5
+
+Créez dans le fichier 03-roleassignment.tf, un role assignment qui va permettre d'attribuer le role déjà existant nommé member à l'utilisateur créé avec le projet créé. 
+
+Afin de pouvoir y arriver créez dans le fichier 04-role.tf un objet data, qui va récupérer les informations du rôle existant member. 
+
+Vérifiez ensuite que tout c'est bien passé. 
