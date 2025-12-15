@@ -1,4 +1,4 @@
-resource "openstack_identity_user_v3" "user_1" {
+resource "openstack_identity_user_v3" "ipi-user" {
   default_project_id = openstack_identity_project_v3.ipi-project.id
   name               = "terraform-demo"
   description        = "Terraform demo user"
