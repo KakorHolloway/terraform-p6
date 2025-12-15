@@ -55,3 +55,9 @@ terraform apply
 ```
 
 Ajoutez à ce réseau une description en vous basant sur la doc https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_network_v2
+
+## Exo 2
+
+Supprimez le network existant 
+
+Créez un fichier nommé project-1.tf, à partir de ce fichier créez un nouveau Identity Project nommé TERRAFORM
