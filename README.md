@@ -61,3 +61,9 @@ Ajoutez à ce réseau une description en vous basant sur la doc https://registry
 Supprimez le network existant 
 
 Créez un fichier nommé project-1.tf, à partir de ce fichier créez un nouveau Identity Project nommé TERRAFORM
+
+## Exo 3 
+
+Dans un nouveau fichier nommé 02-users.tf, créez un nouvel utilisateur du nom que vous voulez dépendant du projet qui à été créé en amont. 
+
+Pour rappel la syntaxe c'est typederessouce.nomterraformdelaressource.attribut
