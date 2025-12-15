@@ -35,3 +35,12 @@ https://releases.hashicorp.com/terraform/1.14.2/terraform_1.14.2_windows_amd64.z
 Mettez le binaire terraform.exe dans le dossier C:/Windows/System32
 
 Au besoin, redémarrez votre client powershell pour voir la commande terraform remonter. 
+
+## Début de projet 
+
+Récupérez le dossier openstack, modifiez le fichier clouds.yaml pour mettre votre propre mot de passe admin et uid de projet. 
+
+Pour trouvcer l'uid de projet rendez-vous sur l'interface d'openstack dans Project > Accès API > Voir les données d'identification
+
+Lancez la commande terraform init et vérifiez que le provider se télécharge bien. 
+
