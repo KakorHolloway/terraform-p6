@@ -1,6 +1,6 @@
 resource "openstack_identity_user_v3" "ipi-user" {
   default_project_id = openstack_identity_project_v3.ipi-project.id
-  name               = var.user_name
+  name               = "${var.user_name}${var.env}"
   description        = "Terraform demo user"
 
   password = "B4teau123!"

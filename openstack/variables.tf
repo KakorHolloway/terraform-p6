@@ -3,3 +3,8 @@ variable "user_name" {
     type = string
     default = "ipi-user"
 }
+
+variable "env" {
+    description = "Valeur d'environnement"
+    type = string
+}
