@@ -44,3 +44,14 @@ Pour trouvcer l'uid de projet rendez-vous sur l'interface d'openstack dans Proje
 
 Lancez la commande terraform init et vérifiez que le provider se télécharge bien. 
 
+## Exo1
+
+Créez le réseau montré en cours nommé ipi-demo-display via terraform 
+
+```
+terraform init
+terraform plan
+terraform apply
+```
+
+Ajoutez à ce réseau une description en vous basant sur la doc https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_network_v2
