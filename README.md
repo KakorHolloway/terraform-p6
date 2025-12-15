@@ -87,3 +87,11 @@ Afin de pouvoir y arriver créez dans le fichier 04-role.tf un objet data, qui v
 Vérifiez ensuite que tout c'est bien passé. 
 
 Pour rappel, une fois le data créé, on peut y faire appel via la syntaxe data.typeressource.nomressource.attribut
+
+## Exo 6 Création d'une infrastructure 
+
+Créez dans le projet un réseau, celui-ci contiendra un sous-réseau interne en 10.0.0.0/24
+
+Ajoutez un groupe de sécurité et des règles de sécurité associé qui vont permettre d'autoriser en entrée les connexion SSH, HTTP et HTTPS. 
+
+Toutes les ressources vont avoir besoin d'un fin de nom identique (le réseau doit d'appeller monréseau-dev et le sous réseau monsouréseau-dev). Ce nom identique doit être dépendant d'une variable. 
