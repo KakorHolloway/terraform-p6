@@ -85,3 +85,5 @@ Créez dans le fichier 03-roleassignment.tf, un role assignment qui va permettre
 Afin de pouvoir y arriver créez dans le fichier 04-role.tf un objet data, qui va récupérer les informations du rôle existant member. 
 
 Vérifiez ensuite que tout c'est bien passé. 
+
+Pour rappel, une fois le data créé, on peut y faire appel via la syntaxe data.typeressource.nomressource.attribut
