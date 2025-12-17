@@ -95,3 +95,59 @@ Créez dans le projet un réseau, celui-ci contiendra un sous-réseau interne en
 Ajoutez un groupe de sécurité et des règles de sécurité associé qui vont permettre d'autoriser en entrée les connexion SSH, HTTP et HTTPS. 
 
 Toutes les ressources vont avoir besoin d'un fin de nom identique (le réseau doit d'appeller monréseau-dev et le sous réseau monsouréseau-dev). Ce nom identique doit être dépendant d'une variable. 
+
+## Comment faire appel à des fichiers de vars 
+
+```
+terraform plan --var-file prod/prod.tfvars # choisir les variables qui vous intéresse
+```
+
+# Comment déployer en dev :
+
+Modifiez le fichier backend.tf pour pointer vers le dossier de dev :
+
+```tf
+terraform {
+  backend "local" {
+    path = "dev/terraform-dev.tfstate"
+  }
+}
+```
+
+Reconfigurez votre terraform pour appliquer la modification du backend:
+
+```
+terraform init -reconfigure
+```
+
+Ensuite lancez vos déploiement avec les commandes habituelle en spécifiant vos fichiers de variables :
+
+```
+terraform plan --var-file dev/dev.tfvars
+terraform apply --var-file dev/dev.tfvars
+```
+
+# Comment déployer en prod :
+
+Modifiez le fichier backend.tf pour pointer vers le dossier de prod :
+
+```tf
+terraform {
+  backend "local" {
+    path = "dev/terraform-prod.tfstate"
+  }
+}
+```
+
+Reconfigurez votre terraform pour appliquer la modification du backend:
+
+```
+terraform init -reconfigure
+```
+
+Ensuite lancez vos déploiement avec les commandes habituelle en spécifiant vos fichiers de variables :
+
+```
+terraform plan --var-file prod/prod.tfvars
+terraform apply --var-file prod/prod.tfvars
+```
