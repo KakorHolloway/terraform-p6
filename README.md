@@ -161,3 +161,13 @@ Faites en sorte de créer deux environnements sur votre openstack, un de dev et 
 Le but est juste de vérifier que vous arrivez à faire fonctionner le mécanisme de backend. 
 
 De fait, j'attends à ce que seul le fichier backend.tf soit modifié conformément à la procédure décrite au-dessus. 
+
+## Exercice 8
+
+Via le meta-argument count créez plusieurs Security Groups, ces derniers devront s'appeller
+
+1-secgroup-ipi${var.env}
+2-sec....
+3-....
+
+Vérifiez le bon fonctionnement du mécanisme

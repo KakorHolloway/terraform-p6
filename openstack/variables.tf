@@ -8,3 +8,9 @@ variable "env" {
     description = "Valeur d'environnement"
     type = string
 }
+
+variable "demo_condition" {
+    type= string
+    default = "test"
+    description = "permet de tester une condition"
+}
