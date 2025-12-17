@@ -151,3 +151,13 @@ Ensuite lancez vos déploiement avec les commandes habituelle en spécifiant vos
 terraform plan --var-file prod/prod.tfvars
 terraform apply --var-file prod/prod.tfvars
 ```
+
+## Exercice 7
+
+Supprimez l'environnement actuel. 
+
+Faites en sorte de créer deux environnements sur votre openstack, un de dev et un de prod en reprenant le code décrit dans le dossier Openstack. 
+
+Le but est juste de vérifier que vous arrivez à faire fonctionner le mécanisme de backend. 
+
+De fait, j'attends à ce que seul le fichier backend.tf soit modifié conformément à la procédure décrite au-dessus. 
