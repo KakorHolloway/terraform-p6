@@ -12,37 +12,42 @@ resource "openstack_networking_subnet_v2" "subnet-ipi" {
 }
 
 resource "openstack_networking_secgroup_v2" "secgroup-ipi" {
-  name        = "secgroup-ipi${var.env}"
+  count       = 3
+
+  name        = "${count.index}-secgroup-ipi${var.env}"
   description = "a security group"
   tenant_id      = openstack_identity_project_v3.ipi-project.id
 }
 
 resource "openstack_networking_secgroup_rule_v2" "secgroup-ssh" {
+  count             = 3
   direction         = "ingress"
   ethertype         = "IPv4"
   protocol          = "tcp"
   port_range_min    = 22
   port_range_max    = 22
   remote_ip_prefix  = "0.0.0.0/0"
-  security_group_id = openstack_networking_secgroup_v2.secgroup-ipi.id
+  security_group_id = openstack_networking_secgroup_v2.secgroup-ipi[count.index].id
 }
 
 resource "openstack_networking_secgroup_rule_v2" "secgroup-http" {
+  count             = 3
   direction         = "ingress"
   ethertype         = "IPv4"
   protocol          = "tcp"
   port_range_min    = 80
   port_range_max    = 80
   remote_ip_prefix  = "0.0.0.0/0"
-  security_group_id = openstack_networking_secgroup_v2.secgroup-ipi.id
+  security_group_id = openstack_networking_secgroup_v2.secgroup-ipi[count.index].id
 }
 
 resource "openstack_networking_secgroup_rule_v2" "secgroup-https" {
+  count             = 3
   direction         = "ingress"
   ethertype         = "IPv4"
   protocol          = "tcp"
   port_range_min    = 443
   port_range_max    = 443
   remote_ip_prefix  = "0.0.0.0/0"
-  security_group_id = openstack_networking_secgroup_v2.secgroup-ipi.id
+  security_group_id = openstack_networking_secgroup_v2.secgroup-ipi[count.index].id
 }
